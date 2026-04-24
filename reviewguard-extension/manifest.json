@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "ReviewGuard",
+  "version": "1.0.0",
+  "description": "AI code review for GitHub PRs — detects AI-generated code and flags risks inline.",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://github.com/*",
+    "http://localhost:8000/*",
+    "http://127.0.0.1:8000/*",
+    "https://*.ngrok-free.app/*",
+    "https://*.ngrok-free.dev/*",
+    "https://*.ngrok.io/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "ReviewGuard",
+    "default_popup": "popup.html"
+  }
+}
