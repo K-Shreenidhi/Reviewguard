@@ -143,7 +143,7 @@ const BACKEND_URL = "https://your-ngrok-url"
 
 ---
 
-## 📸 Screenshots (Add yours here)
+## 📸 Screenshots 
 
 * Sliding Panel UI
 * Risk Highlight in Diff
